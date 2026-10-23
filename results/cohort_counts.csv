@@ -1,0 +1,12 @@
+cohort,n,PH,noPH,role,CT_RHC_over365days
+yu194_mixed_protocol_exploratory,194,157,37,Pooled original-yu measured cohort; protocol-confounded; not primary clinical validation,17.0
+yu_CT_all_intervals,36,30,6,Within-protocol exploratory; minority counts and temporal gap must accompany AUC,6.0
+yu_CT_within30days,26,22,4,"Temporal sensitivity; 30-day window inherited from pilot, not a guideline-defined criterion",0.0
+yu_CTA_all_intervals,26,5,21,Within-protocol exploratory; minority counts and temporal gap must accompany AUC,6.0
+yu_CTA_within30days,19,4,15,"Temporal sensitivity; 30-day window inherited from pilot, not a guideline-defined criterion",0.0
+yu_CTPA_all_intervals,125,121,4,Within-protocol exploratory; minority counts and temporal gap must accompany AUC,4.0
+yu_CTPA_within30days,121,117,4,"Temporal sensitivity; 30-day window inherited from pilot, not a guideline-defined criterion",0.0
+yu_GOLD1to4_sensitivity,160,131,29,Source GOLD1-4 sensitivity only; mixed protocols,16.0
+parent590_source_metadata_diagnostic,590,553,37,NONCLINICAL confounding diagnostic; no CT or clinical measurements used,
+CT443_source_metadata_diagnostic,443,406,37,NONCLINICAL confounding diagnostic; not a 443-person CT model,
+original_CTPA374_feasibility_only,374,371,3,"FEASIBILITY ONLY: 371 PH / 3 noPH, inadequate negative-class validation",

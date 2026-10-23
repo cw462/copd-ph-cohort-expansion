@@ -1,0 +1,70 @@
+{
+  "data_snapshot_date": "2026-10-21",
+  "screened_records": 613,
+  "source_label_eligible": {
+    "n": 590,
+    "PH": 553,
+    "noPH": 37
+  },
+  "held_for_review": {
+    "total": 23,
+    "source_label_conflicts": 22,
+    "weak_identity_merge": 1
+  },
+  "among_source_label_eligible": {
+    "any_CT_quantification": 443,
+    "missing_CT_quantification": 147,
+    "original_clinical_CT_export": {
+      "n": 194,
+      "PH": 157,
+      "noPH": 37
+    },
+    "original_CTPA_export": {
+      "n": 374,
+      "PH": 371,
+      "noPH": 3
+    },
+    "intersection_of_two_feature_sources": 125,
+    "source_GOLD1to4_available": 160,
+    "source_RHC_date_parseable_and_mPAP_positive": 585,
+    "source_RHC_date_parseable_and_mPAP_mPAWP_PVR_positive": 490,
+    "source_referenced_CT_located": 406,
+    "historical_other_date_CT_only": 42,
+    "CT_not_located_in_existing_index": 142,
+    "missing_quantification_but_CT_located": 5,
+    "age_available": 194,
+    "age_missing": 396,
+    "all_age_missing_records_source_label": "PH"
+  },
+  "noncontrast_supplement": {
+    "records": 111,
+    "CT_feature_columns": 285,
+    "all_empty_columns": 36,
+    "columns_with_any_numeric_value": 249,
+    "complete_rows_across249_nonempty_columns": 43,
+    "complete_rows_for_candidate_CT5": 110,
+    "old_cohort_name_candidates": 109,
+    "old_cohort_source_Group3_candidates": 81,
+    "old_cohort_source_NPH_candidates": 28,
+    "source_NPH_candidates_with_old_plain_features_missing": 25,
+    "combined_candidates_in613": 86,
+    "among590_candidates": 85,
+    "among590_source_PH_candidates": 80,
+    "among590_source_noPH_candidates": 5,
+    "held_candidate": 1,
+    "additional_old_NPH_candidates_outside613": 23,
+    "unmatched_to_both_cohorts": 2,
+    "candidate_intersection_with147_missing_CT": 0,
+    "verified_new_completions_of147": 0,
+    "identity_and_scan_date_verified": false,
+    "labels_transferred": false
+  },
+  "limits": [
+    "Source-record counts are not independent clinical adjudication.",
+    "Overlapping source layers must not be added as independent patients.",
+    "Missing GOLD remains unknown rather than being imputed to a disease grade.",
+    "RHC completeness does not establish measurement validity or resolve unspecified PVR units.",
+    "Neither CT source is a 600-person complete CT training cohort.",
+    "Supplementary CSV links remain candidates; they were not used for training."
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "status": "Expanded source-label exploratory analysis; not a 600-patient validated classifier",
+  "label_rule": "Original source PH labels; 22 conflicting plus 1 weak identity merge held; no pressure threshold relabeling",
+  "COPD_rule": "Source etiology/CT diagnosis attribution; GOLD absent/-1/0 retained as unknown severity; not independent COPD adjudication",
+  "feature_sets": {
+    "LR_clinical": [
+      [
+        "age"
+      ],
+      [
+        "sex_code"
+      ]
+    ],
+    "LR_CT5": [
+      [
+        "lung_volume_ml",
+        "LAA950_pct",
+        "lung_mean_HU",
+        "vessel_volume_ml",
+        "artery_BV5_ml"
+      ],
+      []
+    ],
+    "LR_clinical_CT5": [
+      [
+        "age",
+        "lung_volume_ml",
+        "LAA950_pct",
+        "lung_mean_HU",
+        "vessel_volume_ml",
+        "artery_BV5_ml"
+      ],
+      [
+        "sex_code"
+      ]
+    ],
+    "RF_clinical_CT5": [
+      [
+        "age",
+        "lung_volume_ml",
+        "LAA950_pct",
+        "lung_mean_HU",
+        "vessel_volume_ml",
+        "artery_BV5_ml"
+      ],
+      [
+        "sex_code"
+      ]
+    ],
+    "XGB_clinical_CT5": [
+      [
+        "age",
+        "lung_volume_ml",
+        "LAA950_pct",
+        "lung_mean_HU",
+        "vessel_volume_ml",
+        "artery_BV5_ml"
+      ],
+      [
+        "sex_code"
+      ]
+    ],
+    "LR_protocol_only": [
+      [],
+      [
+        "protocol"
+      ]
+    ],
+    "LR_protocol_clinical_CT5": [
+      [
+        "age",
+        "lung_volume_ml",
+        "LAA950_pct",
+        "lung_mean_HU",
+        "vessel_volume_ml",
+        "artery_BV5_ml"
+      ],
+      [
+        "sex_code",
+        "protocol"
+      ]
+    ],
+    "LR_source_metadata_only": [
+      [],
+      [
+        "source_group",
+        "quant_source",
+        "shared_modality"
+      ]
+    ]
+  },
+  "CV": {
+    "seeds": [
+      42,
+      2020,
+      2026
+    ],
+    "outer": "5 folds if minority >=10 else 3",
+    "inner": "3 folds if training minority >=6 else 2",
+    "LR_C_grid": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "selection_metric": "ROC AUC",
+    "threshold": 0.5,
+    "preprocessing": "Training-fold imputation/scaling/encoding only; no resampling, no supervised feature filtering",
+    "patient_isolation": "All available strong source patient keys checked for uniqueness; same folds across models",
+    "RF": "fixed 200 trees, max_depth3, min_samples_leaf5, class_weight balanced_subsample",
+    "XGB": "fixed 150 trees, max_depth2, eta0.03, subsample0.8, colsample0.8, reg_lambda10; training-fold imbalance weight"
+  },
+  "uncertainty": "Repeat min/max are partition variability, not confidence intervals; no external test set",
+  "forbidden_predictors": [
+    "PH label derivatives",
+    "RHC pressures/PVR",
+    "IDs",
+    "GOLD",
+    "source/CT protocol except explicitly diagnostic or adjusted models"
+  ],
+  "feature_definition": "Five original measured CT fields frozen in prior pilot; no outcome-based feature selection",
+  "versions": {
+    "python": "3.14.3",
+    "sklearn": "1.8.0",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "xgboost": "3.2.0"
+  },
+  "date_rule": "Use audited original-yu CT/RHC dates; allow documented terminal-colon removal only, never infer missing century. Original raw date and normalization retained in evidence.",
+  "data_snapshot_date": "2026-10-21",
+  "patient_level_records_in_public_repository": false
+}

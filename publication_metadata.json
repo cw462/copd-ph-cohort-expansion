@@ -1,0 +1,29 @@
+{
+  "title": "COPD-PH cohort expansion: data audit and exploratory machine-learning results",
+  "version": "0.1.0",
+  "prepared_on": "2026-10-23",
+  "analysis_snapshot": "2026-10-21",
+  "repository_owner": "cw462",
+  "repository_url": "https://github.com/cw462/copd-ph-cohort-expansion",
+  "resource_types": [
+    "software",
+    "aggregate research results",
+    "methods documentation"
+  ],
+  "languages": [
+    "zh-CN",
+    "en"
+  ],
+  "keywords": [
+    "COPD",
+    "pulmonary hypertension",
+    "CT",
+    "cohort audit",
+    "machine learning"
+  ],
+  "public_data_scope": "Aggregate results and data-quality counts only; no patient-level clinical or imaging data.",
+  "license": "Not specified in this snapshot",
+  "doi": null,
+  "complete_600_patient_model": false,
+  "trained_deployment_model_included": false
+}

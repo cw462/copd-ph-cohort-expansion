@@ -1,0 +1,8 @@
+feature,description,unit,interpretation_note
+age,Source-recorded age,years,Available only in the comparable clinical CT subset
+sex_code,Original categorical sex code,source category,Do not infer category meanings without the source dictionary
+lung_volume_ml,Whole-lung volume,mL,Keep different export sources separate
+LAA950_pct,Source-recorded low-attenuation lung percentage at -950 HU,percent,Do not combine noncontrast and enhanced acquisitions without review
+lung_mean_HU,Mean lung CT attenuation,HU,Sensitive to acquisition and measurement source
+vessel_volume_ml,Pulmonary vascular volume from the selected export block,mL,Similarly named vessel blocks may contain different measurements
+artery_BV5_ml,Source-exported arterial BV5 volume,mL,Underlying extraction definition/version requires source verification

@@ -1,0 +1,53 @@
+{
+  "data_snapshot_date": "2026-10-21",
+  "independent_private_data_validation_passed": true,
+  "validation_scope": "Private source/membership/feature/timing checks; patient isolation; independent OOF arithmetic; public aggregate export equality.",
+  "outer_fits": 282,
+  "cohort_variants": 11,
+  "model_comparisons": 24,
+  "repeat_metric_groups": 72,
+  "private_OOF_prediction_rows": 11373,
+  "OOF_rows_are_not_independent_patient_count": true,
+  "max_absolute_recomputed_metric_difference": 7.33e-15,
+  "clinical_validity_independently_established": false,
+  "public_aggregate_independent_review": {
+    "passed": true,
+    "checks": 79,
+    "failed_checks": 0
+  },
+  "portable_runner_equivalence": {
+    "validation_date": "2026-10-23",
+    "passed": true,
+    "seeds": [42, 2020, 2026],
+    "cohort_variants": 11,
+    "model_comparisons": 24,
+    "outer_fits": 282,
+    "row_keys_feature_lists_and_missing_patterns_equal": true,
+    "max_absolute_numeric_difference_from_original_run": 4.44e-16,
+    "independent_metric_recomputation_passed": true,
+    "max_absolute_recomputed_metric_difference": 3.33e-16,
+    "private_inputs_and_row_level_outputs_included": false
+  },
+  "public_aggregate_exports": [
+    {
+      "public_file": "results/cohort_counts.csv",
+      "aggregate_rows": 11,
+      "values_equal_to_completed_run": true
+    },
+    {
+      "public_file": "results/metrics_summary.csv",
+      "aggregate_rows": 24,
+      "values_equal_to_completed_run": true
+    },
+    {
+      "public_file": "results/metrics_by_repeat.csv",
+      "aggregate_rows": 72,
+      "values_equal_to_completed_run": true
+    },
+    {
+      "public_file": "results/pooled_model_within_protocol_metrics.csv",
+      "aggregate_rows": 84,
+      "values_equal_to_completed_run": true
+    }
+  ]
+}
